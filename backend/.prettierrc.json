@@ -1,0 +1,15 @@
+{
+  "singleQuote": true,
+  "endOfLine": "lf",
+  "trailingComma": "all",
+  "arrowParens": "avoid",
+  "tabWidth": 2,
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
+}

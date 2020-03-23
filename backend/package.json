@@ -1,0 +1,31 @@
+{
+  "name": "be-the-hero-backend",
+  "description": "Be the Hero",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf build",
+    "dev": "nodemon --exec 'yarn start:ts' --watch src/ --ext ts",
+    "start": "node  build/index.js",
+    "start:ts": "node --inspect -r ts-node/register src/index.ts",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/hapi__hapi": "^19.0.2",
+    "@types/node": "^12.12.6",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.2",
+    "prettier": "^2.0.1",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3"
+  }
+}
