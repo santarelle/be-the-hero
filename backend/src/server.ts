@@ -1,7 +1,9 @@
 import Hapi from '@hapi/hapi';
 
-import HomeController from './modules/home/HomeController';
+import ProfileController from './modules/profile/profile.controller';
 import OngController from './modules/ongs/ong.controller';
+import IncidentController from './modules/incidents/incident.controller';
+import SessionController from './modules/session/session.controller';
 
 class Server {
     private server: Hapi.Server | undefined;
@@ -21,8 +23,10 @@ class Server {
     }
 
     async routes(): Promise<void> {
-        this.server?.route(HomeController.routes());
+        this.server?.route(ProfileController.routes());
         this.server?.route(OngController.routes());
+        this.server?.route(IncidentController.routes());
+        this.server?.route(SessionController.routes());
     }
 }
 
