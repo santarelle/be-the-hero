@@ -27,18 +27,18 @@ class OngController {
 
     index = async (
         req: Request,
-        res: ResponseToolkit,
+        h: ResponseToolkit,
     ): Promise<ResponseObject> => {
         const data = await OngService.find();
-        return res.response(data);
+        return h.response(data);
     };
 
     create = async (
         req: Request,
-        res: ResponseToolkit,
+        h: ResponseToolkit,
     ): Promise<ResponseObject> => {
         const data = await OngService.create(req.payload as Ong);
-        return res.response(data);
+        return h.response(data);
     };
 }
 

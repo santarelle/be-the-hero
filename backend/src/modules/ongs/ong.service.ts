@@ -12,7 +12,7 @@ class OngService {
         return { id };
     };
 
-    find = async (): Promise<Ong> => {
+    find = async (): Promise<Ong[]> => {
         return await connection.Ong().select('*');
     };
 }
