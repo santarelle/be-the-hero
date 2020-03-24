@@ -7,4 +7,5 @@ const connection = knex(configuration.development);
 
 export default {
     Ong: (): knex.QueryBuilder => connection('ongs'),
+    Incident: (): knex.QueryBuilder => connection('incidents'),
 };
